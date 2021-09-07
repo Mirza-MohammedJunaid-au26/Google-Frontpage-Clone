@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;700&display=swap');
+/* font-family: 'Urbanist', sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+/* font-family: 'Ubuntu', sans-serif; */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* basics Classes */
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background: url(./images/bg.png);
+    transition: .3s ease-in-out;
+}
+
+.flex{
+    display: flex;
+}
+
+.flex-center{
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+}
+
+.column{
+    flex-direction: column;
+}
+
+.row{
+    flex-direction: row;
+}
+
+.center{
+    justify-content: center;
+}
+
+.images{
+    height: 17px;
+    width: 17px;
+    margin-right: 12px;
+}
+
+.heading{
+    font-size: 6rem;
+    font-family: 'Urbanist', sans-serif;
+    background: -webkit-linear-gradient(rgb(94, 126, 94),rgb(27, 141, 235), rgb(220, 238, 58));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+}
+/* Navbar */
+
+.navbar{
+  padding: 2px 5px;
+    background: rgb(41, 41, 38);
+    width: 100vw;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.arrows{
+    margin: 6px;
+}
+
+.navbar .arrows i{
+    margin: 3px 5px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.searchbar{
+    margin-left: 10px;
+    border: 2px solid #adaba8;
+    border-radius: 15px;
+    width: 89vw;
+    padding: 2px;
+    height: 30px;
+    margin: 2px;
+    background: #333231;
+    padding: 2px;
+}
+
+.searchbar img{
+    height: 18px;
+    width: 18px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-left: 5px;
+    margin-right: 10px;
+    margin-top: 2px;
+}
+
+.searchbar .searchbar-description{
+    color: #adaba8;
+    margin-top: 2px;
+}
+
+.searchbar .fa-star{
+    color: #adaba8;
+    margin-left:auto;
+    margin-right: 8px;
+    margin-top: 3px;
+}
+
+.seachbar-details .bxs-extension{
+    color: #fff;
+    font-size: 22px;
+    margin-top: 5px;
+    margin-left: 3px;
+}
+
+.seachbar-details .profile{
+    height: 32px;
+    width: 32px;
+    margin-top: 1px;
+    margin-left: 3px;
+}
+
+.seachbar-details .fa-ellipsis-v{
+color: #fff;
+font-size: 18px;
+margin-top: 7px;
+    margin-left: 9px;
+}
+
+.sm-navbar{
+    display: none;
+}
+
+/* Bookmark */
+
+.bookmark{
+    background: #333231;
+    padding: 8px 0px 8px 12px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.bookmark-item{
+    margin-right: 25px;
+}
+
+.bookmark-item a{
+    color: #adaba8;
+    text-decoration: none;
+}
+
+.bookmark-item:last-child{
+    margin-left: auto;
+}
+
+.bookmark-item i{
+    font-size: 20px;
+    margin-right: 10px;
+    padding-left: 10px;
+    border-left: 2px solid #adaba8;
+    color: #fff;
+}
+
+/* Home */
+
+.second-navbar{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 3px;
+}
+
+.second-navbar .profile{
+    height: 35px;
+    width: 35px;
+}
+
+.second-navbar .apps{
+    height: 32px;
+    width: 32px;
+}
+
+.second-navbar a{
+    margin: 5px;
+    text-decoration: none;
+    color: #000000;
+    font-size: 20px;
+}
+
+.second-navbar img{
+    margin: 3px 5px;
+    cursor: pointer;
+}
+
+
+.home{
+    height: 90vh;
+} 
+
+.searching{
+    width: 30vw;
+    height: 4vh;
+    border: 2px solid #adaba8;
+    border-radius: 20px;
+    background: #fff;
+    margin-top: 50px;
+}
+
+.searching .fa-search{
+    margin: 7px 15px;
+    color: #adaba8;
+}
+
+.searching p{
+    font-size: 16px;
+    color: #adaba8;
+    font-weight: 600;
+    margin-top: 7px;
+}
+
+.google-mic{
+    height: 30px;
+    width: 30px;
+    margin-left: auto;
+    margin-right: 10px;
+    margin-top: 3px;
+}
+
+.second-bookmark{
+    margin-top: 40px;
+}
+
+.second-bookmark .bookmark-item .second-bookmark-img{
+    height: 45px;
+    width: 45px;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.second-bookmark .bookmark-item .second-bookmark-img:hover{
+    cursor: pointer;
+}
+
+.second-bookmark .bookmark-item .bookmark-name{
+    margin-top: 6px;
+    color: #fff;
+    font-weight: 600;
+}
+
+
+/* Media Query */
+
+@media only screen 
+   and (min-width : 320px)  and (max-width : 767px){
+       body{
+           background: url(./images/bg.png);
+           background-size: cover;
+           background-repeat: no-repeat;
+       }
+        .bookmark{
+           display: none;
+       }
+       .navbar{
+           display: none;
+       }
+       .second-bookmark .bookmark-item .second-bookmark-img{
+        height: 25px;
+        width: 25px;
+        padding: 3px;
+       }
+       .second-bookmark{
+           flex-wrap: wrap;
+       }
+       .searching{
+        width: 90vw;
+        height: 6vh;
+        border: 2px solid #adaba8;
+        border-radius: 20px;
+        background: #fff;
+        margin-top: 50px;
+        }
+        .shortcut{
+            margin: auto;
+            margin-top: 10px;
+        }
+        .sm-navbar{
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 3px;
+        }
+
+        .sm-navbar .profile{
+            height: 25px;
+            width: 25px;
+        }
+
+        .sm-navbar .apps{
+            height: 22px;
+            width: 22px;
+        }
+
+        .sm-navbar a{
+            margin: 5px;
+            text-decoration: none;
+            color: #000000;
+        }
+
+        .sm-navbar img{
+            margin: 3px 5px;
+            cursor: pointer;
+        }
+
+        .second-navbar{
+            display: none;
+        }
+    
+
+   }
+
+
+@media only screen and (min-width : 768px)  and (max-width : 1024px){
+
+    body{
+        background: url(./images/bg.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+     .bookmark{
+        display: none;
+    }
+    .navbar{
+        display: none;
+    }
+    .searching{
+        width: 60vw;
+    }
+
+}
